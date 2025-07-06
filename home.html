@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Eventos</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+    <header class="topbar">
+        <div class="titulo">CEVA EVENTOS +</div>
+        <input type="text" id="buscador" placeholder="Buscar eventos..." />
+        <button id="logoutButton">Cerrar Sesión</button>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab active" data-tab="eventos">Eventos</button>
+        <button class="tab" data-tab="mis-eventos">Mis eventos</button>
+        </nav>
+
+    <section class="filtros">
+        <select id="categoria">
+            <option value="">Categoría</option>
+            <option value="Gimnasio">Gimnasio</option>
+            <option value="Colectivo">Colectivo</option>
+            <option value="Individual">Individual</option>
+        </select>
+
+        <select id="ubicacion">
+            <option value="">Ubicación</option>
+            <option value="Parque de la Reserva">Parque de la Reserva</option>
+            <option value="Club Regatas">Club Regatas</option>
+            <option value="Campo de Marte">Campo de Marte</option>
+            <option value="Gimnasio BodyFit">Gimnasio BodyFit</option>
+            <option value="Playa Waikiki">Playa Waikiki</option>
+            <option value="Nevado Pastoruri">Nevado Pastoruri</option>
+            <option value="Centro Deportivo CEVA">Centro Deportivo CEVA</option>
+            <option value="Parque Zonal Huiracocha">Parque Zonal Huiracocha</option>
+        </select>
+        <button id="limpiar-filtros">Limpiar filtros</button>
+    </section>
+
+    <main>
+        <div id="eventos" class="tab-content active">
+            <h2>Todos los Eventos</h2>
+            <div id="eventos-container" class="eventos-grid"></div>
+            <p id="no-events-all" class="mensaje-vacio" style="display: none;">No hay eventos disponibles que coincidan con los filtros.</p>
+        </div>
+
+        <div id="mis-eventos" class="tab-content">
+            <h2>Mis Eventos Inscritos</h2>
+            <div id="user-info-display" class="user-info-section"></div>
+            <div id="mis-eventos-container" class="eventos-grid"></div>
+            <p id="no-events-mine" class="mensaje-vacio" style="display: none;">Aún no te has inscrito en ningún evento.</p>
+        </div>
+
+        </main>
+
+    <div id="infoModal" class="modal-general hidden">
+        <div class="modal-content">
+            <h2 id="infoModalTitle"></h2>
+            <p id="infoModalMessage"></p>
+            <div class="modal-buttons">
+                <button id="infoModalCloseButton" class="btn cancelar">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="modal-general hidden">
+        <div class="modal-content">
+            <h2 id="confirmModalTitle"></h2>
+            <p id="confirmModalMessage"></p>
+            <div class="modal-buttons">
+                <button id="confirmCancelButton" class="btn cancelar">Cancelar</button>
+                <button id="confirmOKButton" class="btn eliminar">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+</html>

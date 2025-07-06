@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Registro</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="container" id="container">
+
+        <div class="form-container sign-up-container">
+            <form id="signUpForm">
+                <h1>Crear Cuenta</h1>
+                <input type="text" placeholder="Nombre" id="signUpName" required />
+                <input type="email" placeholder="Email" id="signUpEmail" required />
+                <input type="text" placeholder="DNI" id="signUpDni" required /> <input type="tel" placeholder="Teléfono" id="signUpPhone" required />
+                <input type="password" placeholder="Contraseña" id="signUpPassword" required />
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form id="signInForm">
+                <h1>Iniciar Sesión</h1>
+                <input type="email" placeholder="Email" id="signInEmail" required />
+                <input type="password" placeholder="Contraseña" id="signInPassword" required />
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>¡Hola de Nuevo!</h1>
+                    <p>Para mantenerte conectado, por favor inicia sesión con tu información personal.</p>
+                    <button class="ghost" id="login">Iniciar Sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>¡Bienvenido!</h1>
+                    <p>Si no tienes cuenta, regístrate ahora.</p>
+                    <button class="ghost" id="register">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button success-close">&times;</span> <h2>¡Registro Exitoso!</h2>
+            <p>Tu cuenta ha sido creada satisfactoriamente. Ahora puedes iniciar sesión.</p>
+            <button id="modalLoginButton">Ir a Iniciar Sesión</button>
+        </div>
+    </div>
+
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button alert-close">&times;</span> <h2 id="alertModalTitle">Mensaje</h2>
+            <p id="alertModalMessage">Aquí va el mensaje.</p>
+            <button id="alertModalOKButton">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
